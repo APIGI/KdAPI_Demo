@@ -1,0 +1,191 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>KdAPI_Demo</name>
+    </assembly>
+    <members>
+        <member name="M:KdAPI_Demo._2_Services.OrderService.getOrderTracesByJson(System.String,System.String,System.String,KdAPI_Demo._6_Common.Enums.QueryType)">
+            <summary>
+            服务实现
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:KdAPI_Demo.Model.ApiModel.Logistics_Trajectory_API">
+            <summary>
+            即时查询 url
+            </summary>
+        </member>
+        <member name="P:KdAPI_Demo._3_Models.RecognitionModel.EBusinessID">
+            <summary>
+            用户Id
+            </summary>
+        </member>
+        <member name="P:KdAPI_Demo._3_Models.RecognitionModel.LogisticCode">
+            <summary>
+            物流单号
+            </summary>
+        </member>
+        <member name="P:KdAPI_Demo._3_Models.RecognitionModel.Success">
+            <summary>
+            成功与否
+            </summary>
+        </member>
+        <member name="P:KdAPI_Demo._3_Models.RecognitionModel.Code">
+            <summary>
+            失败原因
+            </summary>
+        </member>
+        <member name="P:KdAPI_Demo._3_Models.RecognitionModel.Shippers">
+            <summary>
+            快递公司
+            </summary>
+        </member>
+        <member name="M:KdAPI_Demo.Models.OperationResult.#ctor">
+            <summary>
+            默认操作成功
+            </summary>
+        </member>
+        <member name="M:KdAPI_Demo.Models.OperationResult.#ctor(System.String)">
+            <summary>
+            以操作失败信息实例操作结果
+            </summary>
+            <param name="failMessage">操作失败信息</param>
+        </member>
+        <member name="P:KdAPI_Demo.Models.OperationResult.IsSuccess">
+            <summary>
+            业务操作是否成功
+            </summary>
+        </member>
+        <member name="P:KdAPI_Demo.Models.OperationResult.FailMessage">
+            <summary>
+            业务如果操作失败，失败信息
+            </summary>
+        </member>
+        <member name="P:KdAPI_Demo.Models.OperationResult.result">
+            <summary>
+            业务操作返回的额外数据
+            </summary>
+        </member>
+        <member name="T:KdAPI_Demo.Controllers.AppreciationController">
+            <summary>
+            增值类接口
+            </summary>
+        </member>
+        <member name="M:KdAPI_Demo.Controllers.AppreciationController.GetExpressCompany(System.String)">
+            <summary>
+            自动识别快递单号
+            </summary>
+            <param name="expressNumber"></param>
+            <returns></returns>
+        </member>
+        <member name="T:KdAPI_Demo.Controllers.OrderController">
+            <summary>
+            下单类接口
+            </summary>
+        </member>
+        <member name="T:KdAPI_Demo.Controllers.QueryController">
+            <summary>
+            查询类接口
+            </summary>
+        </member>
+        <member name="M:KdAPI_Demo.Controllers.QueryController.Immediately(System.String,System.String,System.String)">
+            <summary>
+            即时查询
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KdAPI_Demo._6_Common.Encryption.encrypt(System.String,System.String,System.String)">
+            <summary>
+            电商Sign签名
+            </summary>
+            <param name="content">内容</param>
+            <param name="keyValue">Appkey</param>
+            <param name="charset">URL编码 </param>
+            <returns>DataSign签名</returns>
+        </member>
+        <member name="M:KdAPI_Demo._6_Common.Encryption.MD5(System.String,System.String)">
+            <summary>
+             字符串MD5加密
+            </summary>
+            <param name="str">要加密的字符串</param>
+            <param name="charset">编码方式</param>
+            <returns>密文</returns>
+        </member>
+        <member name="M:KdAPI_Demo._6_Common.Encryption.base64(System.String,System.String)">
+            <summary>
+            base64编码
+            </summary>
+            <param name="str">内容</param>
+            <param name="charset">编码方式</param>
+            <returns></returns>
+        </member>
+        <member name="T:KdAPI_Demo._6_Common.EnmHelper">
+            <summary>
+            枚举辅助类
+            </summary>
+        </member>
+        <member name="M:KdAPI_Demo._6_Common.EnmHelper.GetEnmName(System.Enum)">
+            <summary>
+            获取枚举值的描述
+            </summary>
+            <param name="sourceValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdAPI_Demo._6_Common.EnmHelper.GetEnmList(System.Type)">
+            <summary>
+            获取枚举集合列表
+            </summary>
+            <param name="enmType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdAPI_Demo._6_Common.EnmHelper.ConvertToEnm``1(System.String)">
+            <summary>
+            把字符串转换为枚举
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="source"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdAPI_Demo._6_Common.EnmHelper.ConvertToEnm(System.String,System.Type)">
+            <summary>
+            把字符串转换为枚举
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="source"></param>
+            <returns></returns>
+        </member>
+        <member name="F:KdAPI_Demo._6_Common.Enums.QueryType.ExpressQuery">
+            <summary>
+            快递查询
+            </summary>
+        </member>
+        <member name="F:KdAPI_Demo._6_Common.Enums.QueryType.ImmediatelyQuery">
+            <summary>
+            即时查询
+            </summary>
+        </member>
+        <member name="F:KdAPI_Demo._6_Common.Enums.QueryType.LogisticsTrackingQuery">
+            <summary>
+            物流跟踪
+            </summary>
+        </member>
+        <member name="F:KdAPI_Demo._6_Common.Enums.QueryType.MonitorQuery">
+            <summary>
+            在途监控
+            </summary>
+        </member>
+        <member name="F:KdAPI_Demo._6_Common.Enums.QueryType.ExpressRecognition">
+            <summary>
+            单号识别
+            </summary>
+        </member>
+        <member name="M:KdAPI_Demo._6_Common.HttpHelper.sendPost(System.String,System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            Post方式提交数据，返回网页的源代码
+            </summary>
+            <param name="url">发送请求的 URL</param>
+            <param name="param">请求的参数集合</param>
+            <returns>远程资源的响应结果</returns>
+        </member>
+    </members>
+</doc>
